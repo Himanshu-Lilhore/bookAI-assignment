@@ -3,10 +3,10 @@ import './PricingCard.css'
 export default function PricingCard({ api, model, price }) {
     return (
         <div className='pricingCard relative overflow-hidden'>
-            <div className="min-w-96 sm:min-w-64 p-4 bg-slate-100 border border-gray-400 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-600">
+            <div className="min-w-80 sm:min-w-64 p-4 bg-slate-100 border border-gray-400 rounded-lg shadow sm:p-8 dark:bg-gray-900 dark:border-gray-600">
                 <div className='flex flex-wrap content-start flex-row mb-2 sm:mb-4 text-xl font-medium items-center'>
                     <h5 className="text-xl font-medium text-gray-500 dark:text-gray-400">{`${api}`}</h5>
-                    <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2.5 py-1 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">{`${model}`}</span>
+                    <span className="bg-blue-100 text-blue-800 text-sm font-semibold px-2.5 py-1 rounded dark:bg-blue-200 ml-3 border-blue-800">{`${model}`}</span>
                 </div>
                 <div className="flex items-baseline text-gray-900 dark:text-white">
                     <span className="text-3xl font-semibold">$</span>

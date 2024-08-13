@@ -10,18 +10,16 @@ function ThemeToggle({ isDark, setIsDark }) {
   }, []);
 
   useEffect(() => {
-    console.log("Theme changed:", isDark ? "dark" : "light");
     if (isDark) {
-      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark');
     }
     localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
   }, [isDark]);
 
   function toggleTheme() {
     setIsDark((prevIsDark) => {
-      console.log("Toggling theme:", !prevIsDark);
       return !prevIsDark;
     });
   }

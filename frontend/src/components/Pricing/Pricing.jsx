@@ -5,7 +5,7 @@ import ThemeToggle from "../ThemeToggle"
 import { useState } from 'react';
 
 export default function Pricing() {
-    const [isDark, setIsDark] = useState('dark')
+    const [isDark, setIsDark] = useState('light')
 
     const plans = [
         { api: 'OpenAI', model: 'GPT-3.5', price: '0.002' },
@@ -15,9 +15,9 @@ export default function Pricing() {
     ]
 
     return (
-        <div className="z-10 p-4 flex flex-col relative border border-gray-200 rounded-lg bg-white/75 backdrop-blur-sm dark:bg-gray-900/90 w-fit m-3 max-w-[60rem]">
+        <div className="z-10 p-4 flex flex-col relative border border-gray-400 rounded-lg bg-white/75 backdrop-blur-sm dark:bg-gray-900/90 w-fit m-3 max-w-[60rem]">
             {/* Logo */}
-            <div className="absolute top-4 left-4 rounded-full w-16">
+            <div className="absolute top-4 left-4 rounded-full w-12 sm:w-16">
                 <a href='https://trybookai.com/'>
                     <img className='logo' src='/Book-ai-logo.png'></img>
                 </a>

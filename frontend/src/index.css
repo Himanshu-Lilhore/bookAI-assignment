@@ -10,4 +10,9 @@ body{
     flex-direction: column;
     align-content: center;
     position: relative;
+    background-image: url('BG-light.png');
+}
+
+body.dark{
+    background-image: url('BG-dark.png');
 }
