@@ -1,8 +1,12 @@
 import PricingCard from "./PricingCard"
 import Heading from "../Heading"
 import PricingDetail from "./PricingDetail"
+import ThemeToggle from "../ThemeToggle"
+import { useState } from 'react';
 
 export default function Pricing() {
+    const [isDark, setIsDark] = useState('dark')
+
     const plans = [
         { api: 'OpenAI', model: 'GPT-3.5', price: '0.002' },
         { api: 'OpenAI', model: 'GPT-4', price: '0.03' },
@@ -11,7 +15,19 @@ export default function Pricing() {
     ]
 
     return (
-        <div className="p-4 flex flex-col relative border border-gray-200 rounded-lg dark:bg-gray-900 w-fit m-3 max-w-[60rem]">
+        <div className="z-10 p-4 flex flex-col relative border border-gray-200 rounded-lg bg-white/75 backdrop-blur-sm dark:bg-gray-900/90 w-fit m-3 max-w-[60rem]">
+            {/* Logo */}
+            <div className="absolute top-4 left-4 rounded-full w-16">
+                <a href='https://trybookai.com/'>
+                    <img className='logo' src='/Book-ai-logo.png'></img>
+                </a>
+            </div>
+
+            {/* Theme toggle */}
+            <div className="absolute top-3 right-3">
+                <ThemeToggle isDark={isDark} setIsDark={setIsDark} />
+            </div>
+
             {/* Heading */}
             <Heading text="API pricing" />
 
