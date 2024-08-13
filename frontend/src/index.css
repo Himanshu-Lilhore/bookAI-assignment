@@ -3,16 +3,15 @@
 @tailwind utilities;
 
 
-body{
-    padding: 0.5rem 0;
+body {
+    width: 100dvw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
     position: relative;
-    background-image: url('BG-light.png');
 }
 
-body.dark{
-    background-image: url('BG-dark.png');
-}
+html { scrollbar-width: none; } /* Firefox */
+body { -ms-overflow-style: none; } /* IE and Edge */
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } /* Chrome */

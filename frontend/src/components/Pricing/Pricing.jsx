@@ -15,7 +15,7 @@ export default function Pricing() {
     ]
 
     return (
-        <div className="z-10 p-4 flex flex-col relative border border-gray-400 rounded-lg bg-white/75 backdrop-blur-sm dark:bg-gray-900/90 w-fit m-3 max-w-[60rem]">
+        <div className="z-10 p-4 flex flex-col relative border border-gray-400 rounded-lg bg-white/70 backdrop-blur-sm dark:bg-gray-900/85 m-3 max-w-[60rem]">
             {/* Logo */}
             <div className="absolute top-4 left-4 rounded-full w-12 sm:w-16">
                 <a href='https://trybookai.com/'>
@@ -33,7 +33,7 @@ export default function Pricing() {
 
             {/* Pricing Cards */}
             <div className="flex justify-center my-5">
-                <div className="flex flex-col sm:grid grid-cols-2 gap-4 w-fit">
+                <div className="flex flex-col sm:grid grid-cols-2 gap-4">
                     {plans.map((val, index) => {
                         return (<PricingCard api={val.api} model={val.model} price={val.price} key={index} />)
                     })}
